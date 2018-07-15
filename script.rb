@@ -5,6 +5,8 @@ require_relative 'config'
 
 google_form_link = 'https://docs.google.com/forms/d/e/1FAIpQLScttB5RLW7CehuwY8UxBGBS3kI4nAYD88ZVTE7iHTudt5JDSA/viewform'
 week_of = '07-02-2018'
+first_name = 'Adrian'
+last_name = 'Horning'
 
 driver = Selenium::WebDriver.for :chrome
 wait = Selenium::WebDriver::Wait.new(timeout: 3)
@@ -26,8 +28,8 @@ driver.get google_form_link
 sleep(2)
 
 driver.find_element(:xpath, "//input[@name='emailAddress']").send_keys(ENV['email'])
-driver.find_element(:xpath, "//input[@aria-label='First Name']").send_keys('Adrian')
-driver.find_element(:xpath, "//input[@aria-label='Last Name']").send_keys('Horning')
+driver.find_element(:xpath, "//input[@aria-label='First Name']").send_keys(first_name)
+driver.find_element(:xpath, "//input[@aria-label='Last Name']").send_keys(last_name)
 driver.find_element(:xpath, "//input[@type='date']").send_keys(week_of)
 driver.find_element(:xpath, "//input[@aria-label='Algorithms']").send_keys('4')
 driver.find_element(:xpath, "//input[@aria-label='Web']").send_keys('1.5')
