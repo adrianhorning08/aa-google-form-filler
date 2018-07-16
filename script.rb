@@ -3,8 +3,8 @@ require 'selenium-webdriver'
 require 'io/console'
 require_relative 'config'
 
-google_form_link = 'https://docs.google.com/forms/d/e/1FAIpQLScttB5RLW7CehuwY8UxBGBS3kI4nAYD88ZVTE7iHTudt5JDSA/viewform'
-week_of = '07-02-2018'
+google_form_link = 'https://docs.google.com/forms/d/1kJUJmoQPY-TN0tuQLNfRZJPNmJb8INQr4M5y1AXkDEE/viewform?edit_requested=true'
+week_of = '07-09-2018'
 first_name = 'Adrian'
 last_name = 'Horning'
 
@@ -53,5 +53,6 @@ driver.find_element(:xpath, "//input[@aria-label='On-Sites']").send_keys('0')
 driver.find_element(:xpath, "//input[@aria-label='On-Sites Next Week']").send_keys('0')
 driver.find_element(:xpath, "//input[@aria-label='Onsite Prep']").send_keys('0')
 driver.find_element(:xpath, "//div[@role='button']").click
-
+# just so you can see it was submitted
+sleep(10)
 driver.quit
