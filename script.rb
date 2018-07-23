@@ -52,7 +52,6 @@ driver.find_element(:xpath, "//input[@aria-label='Coding Challenge Time']").send
 driver.find_element(:xpath, "//input[@aria-label='On-Sites']").send_keys('0')
 driver.find_element(:xpath, "//input[@aria-label='On-Sites Next Week']").send_keys('0')
 driver.find_element(:xpath, "//input[@aria-label='Onsite Prep']").send_keys('0')
-driver.find_element(:xpath, "//div[@role='button']").click
+driver.find_element(:class, "freebirdFormviewerViewNavigationSubmitButton").click
 # just so you can see it was submitted
 sleep(10)
-driver.quit
