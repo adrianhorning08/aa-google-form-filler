@@ -13,4 +13,10 @@ ENV['password'] = your_password
 ```
 or I suppose you can just hardcode it in the script
 
+## To Run
+
+`ruby script.rb {date}`
+
+The `{date}` is the week that it is due for. The format has to be `dd-mm-yyyy` For example: `07-16-2018`
+
 Screw the micro-managing
