@@ -39,9 +39,9 @@ class GoogleForm
     @driver.get @google_form_link
     sleep(1)
     @driver.find_element(:xpath, "//input[@name='emailAddress']").send_keys(ENV['email'])
-    @driver.find_element(:xpath, "//input[@aria-label='First Name']").send_keys(first_name)
-    @driver.find_element(:xpath, "//input[@aria-label='Last Name']").send_keys(last_name)
-    @driver.find_element(:xpath, "//input[@type='date']").send_keys(week_of)
+    @driver.find_element(:xpath, "//input[@aria-label='First Name']").send_keys(@first_name)
+    @driver.find_element(:xpath, "//input[@aria-label='Last Name']").send_keys(@last_name)
+    @driver.find_element(:xpath, "//input[@type='date']").send_keys(@week_of)
     @driver.find_element(:xpath, "//input[@aria-label='Algorithms']").send_keys('4')
     @driver.find_element(:xpath, "//input[@aria-label='Web']").send_keys('1.5')
     @driver.find_element(:xpath, "//input[@aria-label='Javascript']").send_keys('2')
