@@ -12,7 +12,7 @@ class GoogleForm
     else
       @week_of = ARGV[0]
     end
-    @google_form_link = 'https://docs.google.com/forms/d/1kJUJmoQPY-TN0tuQLNfRZJPNmJb8INQr4M5y1AXkDEE/viewform?edit_requested=true'
+    @google_form_link = 'https://docs.google.com/forms/d/1uIek5rBWonWN8s1jc9_aiXfqI-YYDFImX4pc5RW2zD8/viewform?edit_requested=true&pli=1'
     @first_name = 'Adrian'
     @last_name = 'Horning'
     @driver = Selenium::WebDriver.for :chrome
@@ -21,6 +21,7 @@ class GoogleForm
 
   def sign_in
     @driver.get 'https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin'
+    sleep(1)
     email_input = @driver.find_element(:id, "identifierId")
     sleep(1)
     email_input.send_keys(ENV['email'])
